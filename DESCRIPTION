@@ -8,8 +8,10 @@ Description: To visualize data
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
+Imports: dplyr, magrittr, tidyr, graphics, maps (>= 3.1.1), readr, tibble
 RoxygenNote: 7.1.0
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    testthat
 VignetteBuilder: knitr

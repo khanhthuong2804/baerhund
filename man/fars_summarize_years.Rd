@@ -2,7 +2,7 @@
 % Please edit documentation in R/baerhund.R
 \name{fars_summarize_years}
 \alias{fars_summarize_years}
-\title{Summarize the data selected by the fars_read_years function}
+\title{fars_summarize_years}
 \usage{
 fars_summarize_years(years)
 }
@@ -13,8 +13,10 @@ fars_summarize_years(years)
 returns a list of the summarized data for one or more years
 }
 \description{
-Summarize the data selected by the fars_read_years function
+fars_summarize_years
 }
 \examples{
-\dontrun{fars_summarize_years(years = c(2013, 2014,2015))}
+\dontrun{
+fars_summarize_years(years = c(2013, 2014,2015))
+}
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/baerhund.R
 \name{fars_read_years}
 \alias{fars_read_years}
-\title{Read data}
+\title{fars_read_years}
 \usage{
 fars_read_years(years)
 }
@@ -13,8 +13,10 @@ fars_read_years(years)
 returns a list with the month and year columns from the file
 }
 \description{
-Read data
+fars_read_years
 }
 \examples{
-\dontrun{fars_read_years(2013:2015)}
+\dontrun{
+fars_read_years(2013:2015)
+}
 }

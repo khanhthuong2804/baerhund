@@ -13,8 +13,10 @@ make_filename(year)
 This function returns a string with the filename customized with given year
 }
 \description{
-Create custom filename with certain year#'
+baerhund
 }
 \examples{
-\dontrun{make_filename(2015)}
+\dontrun{
+make_filename(2015)
+}
 }

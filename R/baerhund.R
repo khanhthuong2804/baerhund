@@ -1,16 +1,21 @@
 #' baerhund
-#'
+
+#' @docType data
+
 #' Create custom filename with certain year#'
 #' @param year A string of lenght four which gives the year added to the filename
 #' @return This function returns a string with the filename customized with given year
 #' @examples
-#' \dontrun{make_filename(2015)}
+#' \dontrun{
+#' make_filename(2015)
+#' }
 #' @export
 make_filename <- function(year) {
   year <- as.integer(year)
   sprintf("accident_%d.csv.bz2", year)
 }
 
+#' fars_read
 #' @param filename A character string of the name of the file to be read
 #' @return This function returns a tibble of the data file
 
@@ -18,7 +23,9 @@ make_filename <- function(year) {
 #' @importFrom dplyr tbl_df
 #'
 #' @examples
-#' \dontrun{fars_read("accident_2015.csv.bz2")}
+#' \dontrun{
+#' fars_read("accident_2015.csv.bz2")
+#' }
 #' @export
 fars_read <- function(filename) {
   system.file("extdata", filename, package = "dienfar")
@@ -31,13 +38,15 @@ fars_read <- function(filename) {
 }
 
 
-#' Read data
+#' fars_read_years
 #' @param years A string of length 4 which gives the year(s),in the fars filename with month and year attributes.
 #' @return returns a list with the month and year columns from the file
 #' @importFrom magrittr %>%
 #' @importFrom dplyr mutate select
 #' @examples
-#' \dontrun{fars_read_years(2013:2015)}
+#' \dontrun{
+#' fars_read_years(2013:2015)
+#' }
 #' @export
 fars_read_years <- function(years) {
   lapply(years, function(year) {
@@ -52,14 +61,16 @@ fars_read_years <- function(years) {
     })
   })
 }
-#'Summarize the data selected by the fars_read_years function
+#' fars_summarize_years
 #' @param years A string of length 4 which gives the year(s),in the fars filename with month and year attributes.
 #' @return returns a list of the summarized data for one or more years
 #' @importFrom magrittr %>%
 #' @importFrom dplyr bind_rows group_by summarize
 #' @importFrom tidyr spread
 #' @examples
-#' \dontrun{fars_summarize_years(years = c(2013, 2014,2015))}
+#' \dontrun{
+#' fars_summarize_years(years = c(2013, 2014,2015))
+#' }
 #' @export
 fars_summarize_years <- function(years) {
   dat_list <- fars_read_years(years)
@@ -70,7 +81,7 @@ fars_summarize_years <- function(years) {
 }
 
 
-#'mapping datapoints and state
+#' fars_map_state
 #' @param state.num An integer representing each US state
 #' @param year A string of length 4 which gives the year
 #' @return returns a map of the given state and the datapoints
@@ -78,7 +89,9 @@ fars_summarize_years <- function(years) {
 #' @importFrom maps map
 #' @importFrom graphics points
 #' @example
-#' \dontrun{fars_map_state(6, 2015)}
+#' \dontrun{
+#' fars_map_state(6, 2015)
+#' }
 #' @export
 fars_map_state <- function(state.num, year) {
   filename <- make_filename(year)

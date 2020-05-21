@@ -2,7 +2,7 @@
 % Please edit documentation in R/baerhund.R
 \name{fars_map_state}
 \alias{fars_map_state}
-\title{mapping datapoints and state}
+\title{fars_map_state}
 \usage{
 fars_map_state(state.num, year)
 }
@@ -15,5 +15,5 @@ fars_map_state(state.num, year)
 returns a map of the given state and the datapoints
 }
 \description{
-mapping datapoints and state
+fars_map_state
 }
