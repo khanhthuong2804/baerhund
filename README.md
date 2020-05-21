@@ -1,10 +1,10 @@
-
+[![Build Status](https://travis-ci.org/khanhthuong2804/baerhund.svg?branch=master)](https://travis-ci.org/khanhthuong2804/baerhund)
 # baerhund
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of baerhund is to ...
+The goal of baerhund is to visualize data.
 
 ## Installation
 
