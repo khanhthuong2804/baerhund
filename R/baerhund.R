@@ -1,5 +1,4 @@
 #' baerhund
-
 #' @docType data
 
 #' Create custom filename with certain year#'
