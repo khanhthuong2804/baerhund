@@ -1,0 +1,19 @@
+---
+title: "baerhund"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{baerhund}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(baerhund)
+```
