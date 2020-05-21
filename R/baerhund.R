@@ -34,7 +34,7 @@ fars_read <- function(filename) {
 #' Read data
 #' @param years A string of length 4 which gives the year(s),in the fars filename with month and year attributes.
 #' @return returns a list with the month and year columns from the file
-#' @importFrom magrittr
+#' @importFrom magrittr %>%
 #' @importFrom dplyr mutate select
 #' @examples
 #' \dontrun{fars_read_years(2013:2015)}
